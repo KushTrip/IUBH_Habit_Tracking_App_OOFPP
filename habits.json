@@ -1,0 +1,58 @@
+[
+    {
+        "name": "wake up",
+        "description": "wake up at 5 a.m",
+        "periodicity": "daily",
+        "date_created": "2025-04-23",
+        "last_completed": "2025-05-26",
+        "streak": 0
+    },
+    {
+        "name": "meditate",
+        "description": "10 minutes of meditation",
+        "periodicity": "daily",
+        "date_created": "2025-04-28",
+        "last_completed": "2025-05-25",
+        "streak": 0
+    },
+    {
+        "name": "picnic",
+        "description": "attend the weekly picnic trip",
+        "periodicity": "weekly",
+        "date_created": "2025-04-22",
+        "last_completed": "2025-05-25",
+        "streak": 4
+    },
+    {
+        "name": "dance",
+        "description": "dance 1 hour",
+        "periodicity": "daily",
+        "date_created": "2025-05-27",
+        "last_completed": "2025-05-28",
+        "streak": 2
+    },
+    {
+        "name": "laugh",
+        "description": "laugh histerically",
+        "periodicity": "daily",
+        "date_created": "2025-05-28",
+        "last_completed": "2025-05-28",
+        "streak": 1
+    },
+    {
+        "name": "drive",
+        "description": "take driving lesson",
+        "periodicity": "weekly",
+        "date_created": "2025-05-28",
+        "last_completed": "2025-05-28",
+        "streak": 1
+    },
+    {
+        "name": "read",
+        "description": "read 20 pages of a book",
+        "periodicity": "daily",
+        "date_created": "2025-05-01",
+        "last_completed": "2025-05-28",
+        "streak": 25
+    }
+]
