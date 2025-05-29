@@ -223,7 +223,21 @@ Enter 4 to Choose "Delete a habit" option from the main screen and type the name
 ```
 
 # Running tests
-To run the test: navigate to the test folder (included with the repository) through command/terminal by using cd and then type ```pytest```. 
+To run the test: navigate to the test folder (included with the repository) through command/terminal by using cd and then type pytest. It should look like this:
+```
+cd C:\Users\username\Downloads\IUBH_Habit_Tracking_App_OOFPP
+C:\Users\username\Downloads\IUBH_Habit_Tracking_App_OOFPP>pytest
+================================================= test session starts =================================================
+platform win32 -- Python 3.13.3, pytest-8.3.5, pluggy-1.6.0
+rootdir: C:\Users\tripa\OneDrive\Documents\OOFPP
+collected 8 items
+
+test_habit_tracker.py ........                                                                                   [100%]
+
+================================================== 8 passed in 0.09s ==================================================
+
+C:\Users\tripa\OneDrive\Documents\OOFPP>
+```
 
 # Contributing
 
