@@ -11,15 +11,15 @@ Module files:
 - habit: Has the Habit class for creating habit objects.
 - database: Oversees the loading and saving of habits to a JSON file.
 - analytics: Provides analytics functions for evaluating habit performance.
-- colorama: Used for colorful terminal output.
 """
 
 import datetime
 from habit import Habit
 from database import HabitDatabase
 import analytics
-from colorama import Fore, Style
+from colorama import Fore            # Used for colored terminal output to enhance user experience.
 
+#------------------------------------------- TO DISPLAY CREATED HABIT ---------------------------------------
 
 # A function to show[s] details of a habit [h]
 def s(h):
@@ -31,18 +31,20 @@ def s(h):
     print(f"\t\t\t\t\t\t\t\tlast completed: {h.get('last_completed', 'N/A')}")
     print(f"\t\t\t\t\t\t\t\tstreak: {h['streak']}\n")
 
+
     # Logic To Display a warning if the habit's streak is broken
-    
     if analytics.streak_evaluate(h) == 0 and h['streak'] == 0:                   # If the habit's streak is broken and the streak is zero
 
-        print(f"{Fore.RED}\t\t\t\t\t\t\t\tCAUTION: Streak of habit '{h['name']}' was reset due to missed check-off.\n")
+        print(f"{Fore.RED}\t\t\t\t\t\t\t\tCAUTION: Streak of habit '{h['name']}' is broken and was reset to 0 due to not checking-off on time.\n")
     else:
         print()  # Just a newline for clean spacing
 
 
 
+#------------------------------------------- TO CREATE A NEW HABIT ---------------------------------------
+
 # TO get input from user to create a new habit and append it to the list of habits.
-def add(list):
+def add(list):                                           # list = list of habits
     """
     User is prompted to enter details for a new habit,
     create a Habit object, and add it to the list.
@@ -57,6 +59,7 @@ def add(list):
     print(f"{Fore.GREEN}\t\t\t\t\t\t\t\tHABIT '{name}' ADDED!\n")
 
 
+#------------------------------------------- TO CHECK-OFF A HABIT ---------------------------------------
 
 # Marks a habit as completed and updates the streak based on time.
 # To Display check-off of a habit
@@ -94,6 +97,7 @@ def checkoff(list):
     print("\nCOULDN'T FIND THAT HABIT.\n")
 
 
+#------------------------------------------- HABIT ANALYSIS ---------------------------------------
 
 #To display analytics of habits 
 #offfers the user different options to analyze their habits.
@@ -103,15 +107,15 @@ def analyze(list):
     - all habits
     - habits by frequency
     - longest streak of all
-    - streak for a specific habit
+    - longest streak for a specific habit
     """
-    analytics.reset_broken_streaks(list)  # Ensure outdated streaks are zeroed out
+    analytics.reset_broken_streaks(list)  # Ensure outdated streaks are zeroed out, i.e reset back to 0
 
     print(Fore.CYAN + "\t\t\t\t\t\t\t\t--- HABIT ANALYSIS ---")
     print("\t\t\t\t\t\t\t\t1. Show all habits")
     print("\t\t\t\t\t\t\t\t2. Show habits by periodicity")
     print("\t\t\t\t\t\t\t\t3. Show habit with the longest streak")
-    print("\t\t\t\t\t\t\t\t4. Show streak for a specific habit")
+    print("\t\t\t\t\t\t\t\t4. Show longest streak for a specific habit")
 
     option = input("\n\t\t\t\t\t\t\t\tChoose one: ")
     print()
@@ -140,6 +144,8 @@ def analyze(list):
         print(Fore.RED + "\t\t\t\t\t\t\t\tNOT A VALID CHOICE!")
 
 
+#------------------------------------------- TO REMOVE A NEW HABIT ---------------------------------------
+
 
 #To display habit removal
 def remove(list):                                                                   #let the user remove a habit by name
@@ -163,13 +169,15 @@ def remove(list):                                                               
 
 
 
+#----------------------------------------------------------------- MAIN FUNCTION --------------------------------------------------------------
+
 # Main function to run the Habit Tracker application
 def main():
     """
     Main loop for running the Habit Tracker application.
     Loads data, presents menu options, and processes user commands.
     """
-    db = HabitDatabase('habits.json')# Initialize the HabitDatabase with the filename 'habits.json'
+    db = HabitDatabase('habits.json')                                             # Initialize the HabitDatabase with the filename 'habits.json'
     list = db.load_habits()                                                      # Load existing habits from the JSON file
 
     while True:
