@@ -3,19 +3,18 @@
 """
 Analytics Module
 
-Provides helper functions to analyze habit data, such as filtering by periodicity,
-finding the longest streak, and specific habit streaks.
+Provides helper functions to analyze habit data, such as show all the created habits, filtering by periodicity,
+finding the longest streak amongst all, and specific habit streaks.
 """
 import datetime    # Used to check streak status based on dates (last_completed vs today).
 
 def habits_list(list):
     """Return all habits.
 
-    Argument:
-        habit_list (list): List of habit dictionaries.
+    Parameter:
+        list : List of habit dictionaries.
 
-    Returns:
-        list: Same list of habits.
+    Returns the Same list of habits.
     """
     return list
 
@@ -26,20 +25,20 @@ def same_periodicity_habits(list, freq):
     Filter and return habits by specified periodicity.
 
     Argument:
-        habit_list (list): List of habit dictionaries.
+        list : List of habit dictionaries.
         freq (str): Frequency to choose between ('daily' or 'weekly').
 
     Returns:
         list: Filtered list of habits.
     """
-    return [h for h in list if h['periodicity'] == freq]
+    return [h for h in list if h['periodicity'] == freq] # h= habit, list = list of habits, freq = frequency to filter by (daily/weekly).
 
 
 
 def streak_evaluate(habit, current_date=None):
     """
-    - Core helper to evaluate whether a habit's current streak is still valid.
-    - Used internally by the last two functions.
+    - Function used to evaluate whether a habit's current streak is still valid.
+    - Used internally by below three functions.
     """
     if not habit['last_completed']:
         return 0                                                                      #  If the habit has never been completed, return streak 0.
@@ -64,8 +63,7 @@ def longest_streak(list):
     """
     Find the longest streak among all habits.
 
-    Args:
-        habit_list (list): List of habit dictionaries.
+    list: List of habit dictionaries.
 
     Returns: Longest streak found.
     """
@@ -77,14 +75,12 @@ def longest_streak(list):
 
 def habit_longest_streak(list, name):                       
     """
-    Get the streak value for a specific habit by name.
+    Get the longest streak value for a specific habit by name.
 
-    Args:
-        habit_list (list): List of habit dictionaries.
+        list: List of habit dictionaries.
         name (str): Name of the habit to search for.
 
-    Returns:
-        int: Streak value or 0 if not found.
+    Returns Streak value or 0 if not found.
     """
     for h in list:                            # Iterate through the list of habits
         
@@ -95,13 +91,13 @@ def habit_longest_streak(list, name):
 	
 
 
-def reset_broken_streaks(habit_list):
+def reset_broken_streaks(list):
     """
     Resets the streak of habit to 0 if the user doesn't maintain the streak by not checking off a habit daily/weekly, making streak invalid.
     This avoids confusion when analyzing.
 	Informs the user in the output when a streak is reset due to inactivity.
     """
-    for habit in habit_list:
-        if streak_evaluate(habit) == 0:
-            habit['streak'] = 0
+    for habit in list:                         # Iterate through each habit in the list
+        if streak_evaluate(habit) == 0:            # If the habit's streak is evaluated to 0 (meaning it has been broken)
+            habit['streak'] = 0                   # Reset the streak to 0
 
