@@ -73,14 +73,14 @@ After installing the required tools, download the files from this repository and
 <br>
 To clone the repository, navigate to the desired directory. Click this link to clone the repository and download the habit tracker application:
 ```
-https://github.com/KushTrip/IUBH_Habit_Tracking_App_OOFPP.git
+[https://github.com/KushTrip/IUBH_Habit_Tracking_App_OOFPP.git](https://github.com/KushTrip/IUBH_Habit_Tracking_App_OOFPP.git)
 ```
 
 Open your command/terminal window and change directory [cd] to your downloaded folder.By changing directories, you can navigate to the specific location where the files or folders are located and perform operations on them.<br>
 <br>
 <br>Install it by running the below command:<br>
 ```
-cd C:\Users\username\Downloads\IU-Habit-Tracking-Application-OOFPP
+cd C:\Users\username\Downloads\IUBH_Habit_Tracking_App_OOFPP
 ```
 After that, type the following command to execute the program:
 ```
@@ -223,7 +223,7 @@ Enter 4 to Choose "Delete a habit" option from the main screen and type the name
 ```
 
 # Running tests
-To run the test: navigate to the test folder (included with the repository) through command/terminal by using [cd](https://www.alphr.com/change-directory-in-cmd/) and then type ```pytest```. 
+To run the test: navigate to the test folder (included with the repository) through command/terminal by using cd and then type ```pytest```. 
 
 # Contributing
 
