@@ -28,16 +28,8 @@
         "description": "dance 1 hour",
         "periodicity": "daily",
         "date_created": "2025-05-27",
-        "last_completed": "2025-05-28",
-        "streak": 2
-    },
-    {
-        "name": "laugh",
-        "description": "laugh histerically",
-        "periodicity": "daily",
-        "date_created": "2025-05-28",
-        "last_completed": "2025-05-28",
-        "streak": 1
+        "last_completed": "2025-05-29",
+        "streak": 3
     },
     {
         "name": "drive",
@@ -52,7 +44,7 @@
         "description": "read 20 pages of a book",
         "periodicity": "daily",
         "date_created": "2025-05-01",
-        "last_completed": "2025-05-28",
-        "streak": 25
+        "last_completed": "2025-05-29",
+        "streak": 26
     }
 ]
