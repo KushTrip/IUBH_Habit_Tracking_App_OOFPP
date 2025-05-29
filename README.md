@@ -71,10 +71,8 @@ pip install pytest
 ## How To Run the Program
 After installing the required tools, download the files from this repository and store them in a separate folder.
 <br>
-To clone the repository, navigate to the desired directory. Click this link to clone the repository and download the habit tracker application:
-```
-[https://github.com/KushTrip/IUBH_Habit_Tracking_App_OOFPP.git](https://github.com/KushTrip/IUBH_Habit_Tracking_App_OOFPP.git)
-```
+To clone the repository, navigate to the desired directory. Click this [link](https://github.com/KushTrip/IUBH_Habit_Tracking_App_OOFPP.git) to clone the repository and download the habit tracker application:
+
 
 Open your command/terminal window and change directory [cd] to your downloaded folder.By changing directories, you can navigate to the specific location where the files or folders are located and perform operations on them.<br>
 <br>
