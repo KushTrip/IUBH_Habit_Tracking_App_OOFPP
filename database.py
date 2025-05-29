@@ -5,7 +5,7 @@ Database Module
 
 - Now that Habit objects exist (from habit.py), we need a way to store them and load them later.
 
-- Without database.py, our app could create habits but would lose them once the app is closed.
+- Without database.py, the app could create habits but would lose them the moment the app is closed.
 
 - HabitDatabase handles all file-based operations, keeping this logic separate from the user interface (main.py).
 
