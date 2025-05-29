@@ -31,6 +31,8 @@ class Habit:
             name (str): Name of the habit.
             description (str): Description of the habit.
             periodicity (str): Frequency of the habit ('daily' or 'weekly').
+            date_created : stores the date
+            last_completed : stores the latest date when a habit is checked off 
         """
         self.name = name
         self.description = description
@@ -53,4 +55,4 @@ class Habit:
             'streak': self.streak
         }
     
-    # Now that a habit is created, the next logical step is to save it into a file and retrieve it later.
+    # Now that a habit is created, the next logical step is to save it into a file and retrieve it later. So I will start building database.py next.
